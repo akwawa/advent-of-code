@@ -16,4 +16,7 @@ jobs:
         env:
           BATS_LIB_PATH: ${{ steps.setup-bats.outputs.lib-path }}
           TERM: xterm
-        run: bats tests/
+        run: bats test/
+      - name: Run tests Shell
+        shell: bash
+        run: run_all_tests.sh
